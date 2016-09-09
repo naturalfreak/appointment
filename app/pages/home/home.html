@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Navigation</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of _category.getCategories()" (click)="openNavDetailsPage(item.name, item.sub)">
+      <ion-icon [name]="'logo-' + item.icon" item-left></ion-icon>
+      {{item.name}}
+    </button>
+  </ion-list>
+</ion-content>

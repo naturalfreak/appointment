@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{data.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-icon ></ion-icon>
+  Test
+</ion-content>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let item of data.items">
+      <ion-icon [name]="'logo-' + item.icon" item-left></ion-icon>
+      {{item.name}}
+    </button>
+  </ion-list>
+</ion-content>
